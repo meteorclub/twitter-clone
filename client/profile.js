@@ -5,7 +5,7 @@ Template.profile.helpers({
   isFollowed: function(){
     var currentUser = Meteor.user();
     var profileUser = this;
-    return _.contains(currentUser.following, profileUser._id);
+    return _.contains(currentUser.profile.following, profileUser._id);
   }
 });
 
