@@ -3,7 +3,7 @@ Meteor.publish('tweets', function() {
 })
 
 Meteor.publish('profile', function(username) {
-  return Users.find({username: username}, {fields: {createdAt: 1, profile: 1, username: 1}});
+  return Users.find({username: username}, {fields: {createdAt: 1, profile: 1, username: 1, following: 1}});
 })
 
 Meteor.publish('profileTweets', function(username) {
