@@ -11,10 +11,15 @@ Template.profile.helpers({
 
 
 Template.profile.events({
-  "click .follow-me": function(e){
+  "click .btn-follow": function(e){
     console.log("follow clicked");
-    var currentUser = Meteor.user();
     var profileUser = this;
     Meteor.call("follow", profileUser._id);
+  },
+  "click .btn-unfollow": function(e){
+    console.log("follow clicked");
+    var profileUser = this;
+    Meteor.call("unfollow", profileUser._id);
   }
+
 });
